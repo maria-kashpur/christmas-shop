@@ -5,6 +5,7 @@ import pluginSvgVue from "@vuetter/vite-plugin-vue-svg";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/christmas-shop/',
   plugins: [vue(), pluginSvgVue()],
   css: {
     preprocessorOptions: {
@@ -21,9 +22,7 @@ export default defineConfig({
       },
       {
         find: "@assets",
-        replacement: fileURLToPath(
-          new URL("./src/assets", import.meta.url)
-        ),
+        replacement: fileURLToPath(new URL("./src/assets", import.meta.url)),
       },
     ],
   },

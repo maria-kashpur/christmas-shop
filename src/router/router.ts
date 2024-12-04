@@ -9,7 +9,7 @@ const routes = [
 ];
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/christmas-shop/"),
   routes,
   scrollBehavior(to, _from, _savedPosition) {
     if (to.hash) {
