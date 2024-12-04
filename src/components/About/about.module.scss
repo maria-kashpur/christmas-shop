@@ -1,0 +1,78 @@
+@use "@assets/styles/style.scss" as *;
+
+$column-vue: 700px;
+
+.about_wrap {
+  background: url("./../../assets/images/bg-snow.png") top center / cover, $primary;
+  min-height: 524px;
+  width: 100%;
+  padding: 60px 8px;
+}
+
+.about {
+  margin: 0 auto;
+  max-width: 1276px;
+  display: flex;
+  background-color: $static-white;
+  border-radius: 20px;
+  min-height: 528px;
+
+  @media (max-width: $column-vue) {
+    flex-direction: column;
+  }
+}
+
+.about__content {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px;
+  gap: 20px;
+
+  @media (max-width: $column-vue) {
+     padding: 60px 20px;
+  }
+}
+
+.section_name {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: $primary;
+}
+
+.about__title {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $dark;
+}
+
+.about__text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  color: $dark;
+}
+
+.about__img {
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    object-fit: cover;
+
+    @media (max-width: $column-vue) {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

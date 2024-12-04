@@ -1,0 +1,143 @@
+@use "@assets/styles/style.scss" as *;
+
+  $show-burger: 768px;
+  $zIndex-menu: 10;
+
+  .logo {
+    flex-shrink: 0;
+    position: relative;
+    z-index: $zIndex-menu;
+
+    width: 141px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 64px;
+
+    @media (max-width: $show-burger) {
+      justify-content: space-between;
+    }
+  }
+
+  .nav {
+    @media (max-width: $show-burger) {
+      opacity: 0;
+      padding-top: 64px;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transform: scale(0);
+    }
+
+    &.open {
+      transition: all 0.5s ease;
+      opacity: 1;
+      visibility: visible;
+      background-color: $static-white;
+      transform: scale(1);
+
+      & .nav__list {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    border-radius: 12px;
+    padding: 12px 20px;
+    height: 40px;
+
+    max-width: 100%;
+    box-sizing: border-box;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &:hover, &.active {
+      color: $primary;
+      background-color: $primary-10;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 16px 10px;
+    position: relative;
+
+    cursor: pointer;
+
+    @media (max-width: $show-burger) {
+      display: block;
+    }
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: $dark;
+      transition: all 0.5s ease;
+    }
+
+    &::after {
+      top: 16px;
+    }
+
+    &::before {
+      bottom: 16px;
+    }
+
+
+    &.open {
+      &::after {
+        transform: rotate(45deg) translateY(5px);
+      }
+
+      &::before {
+        transform: rotate(-45deg) translateY(-5px);
+      }
+    }
+  }

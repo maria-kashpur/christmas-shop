@@ -1,0 +1,96 @@
+@use "@assets/styles/style.scss" as *;
+
+.gift_wrap {
+  max-width: 400px;
+  border-radius: 20px;
+  background-color: $content-background;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+  }
+}
+.about {
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: $static-white;
+  flex: 1 0 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  
+
+  &.work {
+    color: $tag-purple;
+  }
+
+  &.harmony {
+    color: $tag-pink;
+  }
+
+  &.health {
+    color: $tag-green;
+  }
+
+}
+
+.title {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $dark;
+}
+
+// .description {
+
+// }
+
+.subtitle {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $dark;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.superpowers {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  gap: 0px 12px;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  color: $dark;
+}
+
+.superpowers__title {
+  text-transform: capitalize;
+}
