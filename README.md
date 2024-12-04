@@ -22,10 +22,8 @@ Christmas Shop — проект, представляющий из себя ад
 - Использование Vue Router;
 - Реализована кнопка, позволяющая при пролистывание страницы вернуться в начало страницы;
 
-
-
 ## Ссылка на деплой: 
-https://maria-kashpur.github.io/christmas-shop/index.html
+https://maria-kashpur.github.io/christmas-shop/
 
 ## Дополнительная информация:
 Подробнее о RSSchool: https://rs.school/
