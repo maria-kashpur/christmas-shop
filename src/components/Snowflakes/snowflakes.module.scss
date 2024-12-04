@@ -1,0 +1,14 @@
+.snowflake_wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.snowflake_icon {
+  opacity: 0.1;
+
+  &.active {
+    opacity: 1;
+  }
+}

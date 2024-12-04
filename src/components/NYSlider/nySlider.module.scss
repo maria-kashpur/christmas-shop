@@ -1,0 +1,207 @@
+@use "@assets/styles/style.scss" as *;
+
+.nySlider {
+  background: url("./../../assets/images/bg-snow.png") top center / cover, $primary;
+  padding: 60px 8px;
+  min-height: 488px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.nySlider_name {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: $static-white;
+  margin-bottom: 12px;
+}
+
+.nySlider_title {
+  margin-bottom: 20px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $static-white;
+}
+
+.slider {
+  margin: 20px auto;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slider__track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.nySlider_text {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $static-white;
+}
+
+.nySlider_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 20px;
+
+  flex-grow: 0;
+
+  width: 200px;
+  height: 200px;
+
+  overflow: hidden;
+}
+
+.slider__control {
+  display: flex;
+  gap: 20px;
+ justify-content: flex-end;
+}
+
+.slider__prev_btn,
+.slider__next_btn {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 56px;
+  height: 56px;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  background: transparent;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.208);
+  }
+
+  .arrow {
+    stroke: rgb(255, 255, 255);
+  }
+
+  &.unactive {
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    .arrow {
+      stroke: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.slider__prev_btn {
+  transform: rotate(180deg);
+}
+
+
+
+// $column-vue: 700px;
+
+// .about_wrap {
+//   background: url("./../../assets/images/bg-snow.png") center center / cover, $primary;
+//   min-height: 524px;
+//   width: 100%;
+//   padding: 60px 8px;
+// }
+
+// .about {
+//   margin: 0 auto;
+//   max-width: 1276px;
+//   display: flex;
+//   background-color: $static-white;
+//   border-radius: 20px;
+//   min-height: 528px;
+
+//   @media (max-width: $column-vue) {
+//     flex-direction: column;
+//   }
+// }
+
+// .about__content {
+//   flex: 0 0 50%;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   padding: 60px;
+//   gap: 20px;
+
+//   @media (max-width: $column-vue) {
+//      padding: 60px 20px;
+//   }
+// }
+
+// .section_name {
+//   font-family: $second-family;
+//   font-weight: 400;
+//   font-size: 24px;
+//   line-height: 100%;
+//   letter-spacing: 0.05em;
+//   color: $primary;
+// }
+
+// .about__title {
+//   font-family: $font-family;
+//   font-weight: 600;
+//   font-size: 24px;
+//   line-height: 152%;
+//   letter-spacing: 0.16em;
+//   text-transform: uppercase;
+//   color: $dark;
+// }
+
+// .about__text {
+//   font-family: $font-family;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 148%;
+//   color: $dark;
+// }
+
+// .about__img {
+//   border-radius: 20px;
+//   overflow: hidden;
+//   img {
+//     height: 100%;
+//     object-fit: cover;
+
+//     @media (max-width: $column-vue) {
+//       width: 100%;
+//       height: auto;
+//       object-fit: contain;
+//     }
+//   }
+// }
