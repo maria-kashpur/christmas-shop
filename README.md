@@ -25,5 +25,8 @@ Christmas Shop — проект, представляющий из себя ад
 ## Ссылка на деплой: 
 https://maria-kashpur.github.io/christmas-shop/
 
+## Ссылка на макет: 
+https://www.figma.com/design/CrVpTs6o8MRBby7pWkInjQ/Christmas-Shop-(Copy)?node-id=3-4196&node-type=frame&t=JcqLu7Q2j7mtfwMD-0
+
 ## Дополнительная информация:
 Подробнее о RSSchool: https://rs.school/
